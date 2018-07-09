@@ -2,13 +2,72 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<title>Home</title>
+	<title>Spring Crud</title>
+	
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function()		
+	{
+		
+		
+		
+		$("#save").click(function()
+	    {
+	    
+			
+			$.ajax({
+			url:"save",
+			cache:false,
+			success:function(data)
+			{
+				$("#s").html(data);
+			}
+				
+				
+				
+			})
+			
+	    });
+		
+		
+	});
+	</script>
+	
 </head>
+
+
 <body>
 <h1>
-	Hello world!  
+	A crud example  
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
+<table>
+
+<tr>
+<td>Student Name </td>
+<td><input id="studentname" type="text" value="" />
+</tr>
+
+<tr>
+<td>Address</td>
+<td><input type="text" id="address" value="" />
+</td>
+</tr>
+
+<tr>
+<td>
+<button id="save">Save it</button>
+</td>
+</tr>
+
+
+</table>
+
+<div id="s">
+
+
+</div>
+
+
 </body>
 </html>
