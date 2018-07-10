@@ -9,27 +9,25 @@
 	$(document).ready(function()		
 	{
 		
-		
-		
 		$("#save").click(function()
 	    {
-	    
-			
+	   
+	    var value="";
 			$.ajax({
-			url:"save",
+			url:"save?name="+$("#studentname").val()+"&address="+$("#address").val(),
+			type: "post",
+			data: value,
 			cache:false,
 			success:function(data)
 			{
+				
 				$("#s").html(data);
 			}
-				
-				
-				
+					
 			})
 			
 	    });
-		
-		
+
 	});
 	</script>
 	
