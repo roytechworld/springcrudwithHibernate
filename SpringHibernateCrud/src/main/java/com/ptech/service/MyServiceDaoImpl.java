@@ -12,15 +12,15 @@ import com.ptech.pojo.StudentMaster;
  * Developer : Pradipto Roy (Java developer)
  */
 @Service
-@Repository
 public class MyServiceDaoImpl implements MyServiceDao {
+
 	@Autowired
-	public StudentDao studentobj;
+	StudentDao st;
 	
 	@Override
 	public boolean saveStudentdata(StudentMaster s) {
 		// TODO Auto-generated method stub
-		return studentobj.save(s);
+		return st.save(s);
 	}
 
 }
