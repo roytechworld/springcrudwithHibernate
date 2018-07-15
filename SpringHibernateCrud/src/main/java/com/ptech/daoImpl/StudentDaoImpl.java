@@ -1,5 +1,8 @@
 package com.ptech.daoImpl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.apache.commons.logging.Log;
@@ -37,10 +40,26 @@ public class StudentDaoImpl implements StudentDao{
 			logger.info("Exception occur "+e);
 		}
 		
-		
-		
-		
 		return result;
+	}
+
+	@Transactional
+	@Override
+	public List<StudentMaster> getAllDetails() {
+		// TODO Auto-generated method stub
+		
+		List<StudentMaster> studentlist=new ArrayList<StudentMaster>();
+		try
+		{
+		studentlist=this.sessionfactory.getCurrentSession().createQuery("from StudentMaster").list();
+			
+		}
+		catch(Exception e)
+		{
+			logger.error("list retreive error occur : "+e);
+		}
+		
+		return studentlist;
 	}
 	
 

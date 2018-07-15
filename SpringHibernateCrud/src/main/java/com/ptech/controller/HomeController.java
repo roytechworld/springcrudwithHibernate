@@ -1,7 +1,9 @@
 package com.ptech.controller;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
@@ -64,9 +66,12 @@ public class HomeController {
     if(save)
     {
     	logger.info("Save successfully");
+    	
     }
     
-    model.addAttribute("mesage","Name found : "+name+"  Address found : "+ address);
+    List<StudentMaster> studentlist=loadservice.getStudentDetails();
+    
+    model.addAttribute("stlist", studentlist);
 	
 	return "savePage";
 		
