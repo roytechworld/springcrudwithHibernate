@@ -8,5 +8,6 @@ public interface StudentDao {
 	
 	public boolean save(StudentMaster s);
 	public List<StudentMaster> getAllDetails();
+	public List<StudentMaster> getAllDetails(Integer pageid,Integer total);
 
 }
