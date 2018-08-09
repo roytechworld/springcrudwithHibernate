@@ -3,48 +3,29 @@
 <html>
 <head>
 	<title>Spring Crud</title>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-	rel="stylesheet" media="screen" />
-
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script type="text/javascript" th:src="@{js/admin.js}"></script>
-<script type="text/javascript" 	th:src="@{../js/datatables.min.js}"></script>
+	
 
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	rel="stylesheet" media="screen" />
+         <script src="<%=request.getContextPath() %>/resources/js/jquery.min.js"></script>
 
-<link th:href="@{../css/starter-template.css}" rel="stylesheet" media="screen" />
-<link th:href="@{../css/datatables.min.css}" rel="stylesheet" media="screen" />
-
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-
-
-
-
-
-
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+	 
+	 
+	 
+	 
 	<script type="text/javascript">
 	$(document).ready(function()		
 	{
 		
 		
-		 $('#table_id').DataTable();
+		
 		
 // 		$('#paginatedTable').dataTable().fnSetFilteringEnterPress();
 	
 		
 		$("#save").click(function()
 	    {
+			alert("called");
 	   
 	    var value="";
 			$.ajax({
@@ -70,6 +51,8 @@
 
 <body>
 <h1>
+
+<%=request.getContextPath() %>
 	A crud example  
 </h1>
 

@@ -84,12 +84,7 @@ public class HomeController {
 	
     StudentMaster obj=new StudentMaster("", name, address);
     
-    boolean save=loadservice.saveDetails(obj);
-    if(save)
-    {
-    	logger.info("Save successfully");
-    	
-    }
+    loadservice.saveDetails(obj);
     
     List<StudentMaster> studentlist=loadservice.getStudentDetails();
     
